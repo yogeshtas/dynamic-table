@@ -1,7 +1,9 @@
 
 <article>
   <h2>Dynamic Table</h2>
- 
+  <mat-form-field>
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+  </mat-form-field>
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
 
   <ng-container *ngFor="let column of displayedColumns">
